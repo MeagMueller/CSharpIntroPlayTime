@@ -22,10 +22,12 @@ namespace CSharpIntroPlayTime
             {
                 GuessingGame();
             }
-            else if (response != "A" || response != "a") {
+            else if (response != "A" || response != "a") 
+            {
                 Console.WriteLine("You have selected an invalid option!");
             }
-            else if (response != "B" || response != "b") {
+            else if (response != "B" || response != "b") 
+            {
                 Console.WriteLine("You have selected in invalid option!");
             }
 
@@ -72,22 +74,25 @@ namespace CSharpIntroPlayTime
                 // Add a conditional to determine if the user's guess is higher than the answer
                 //  If so, print "Too High!" to the console
 
-                if (guess > answer) {
+                if (guess > answer) 
+                {
                     Console.WriteLine("Too high!");
-                } 
-                else if (guess < answer) {
-                    Console.WriteLine("Too low!");
                 }
+
                 // Add a conditional to determine if the user's guess is lower than the answer
                 //  If so, print "Too Low!" to the console
 
-                // When the user guesses correctly, tell them and return from the method
+                else if (guess < answer) 
+                {
+                    Console.WriteLine("Too low!");
+                }
 
-                while (guess == answer) {
+                // When the user guesses correctly, tell them and return from the method
+                else
+                {
                     Console.WriteLine("You got it!");
                     return;
                 }
-                
             }
 
             Console.WriteLine("Better luck next time...");

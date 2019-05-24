@@ -18,9 +18,15 @@ namespace CSharpIntroPlayTime
             {
                 GroceryList();
             }
-            else  // change this to only call GuessingGame() when the user enters option "B"
+            else if (response == "B" || response == "b") // change this to only call GuessingGame() when the user enters option "B"
             {
                 GuessingGame();
+            }
+            else if (response != "A" || response != "a") {
+                Console.WriteLine("You have selected an invalid option!");
+            }
+            else if (response != "B" || response != "b") {
+                Console.WriteLine("You have selected in invalid option!");
             }
 
             // If the user didn't input an "A" or "B" print a message 

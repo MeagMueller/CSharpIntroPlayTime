@@ -46,13 +46,15 @@ namespace CSharpIntroPlayTime
                 groceries.Add(input);
 
                 // Ask for the input again
+                
+                input = Console.ReadLine();
             }
-
+            
             Console.WriteLine();
             Console.WriteLine("Your grocery list:");
             foreach (string grocery in groceries)
             {
-                // Write the grocery to the console
+                Console.WriteLine(grocery); // Write the grocery to the console
             }
         }
 
@@ -70,12 +72,22 @@ namespace CSharpIntroPlayTime
                 // Add a conditional to determine if the user's guess is higher than the answer
                 //  If so, print "Too High!" to the console
 
+                if (guess > answer) {
+                    Console.WriteLine("Too high!");
+                } 
+                else if (guess < answer) {
+                    Console.WriteLine("Too low!");
+                }
                 // Add a conditional to determine if the user's guess is lower than the answer
                 //  If so, print "Too Low!" to the console
 
                 // When the user guesses correctly, tell them and return from the method
-                Console.WriteLine("You got it!");
-                return;
+
+                while (guess == answer) {
+                    Console.WriteLine("You got it!");
+                    return;
+                }
+                
             }
 
             Console.WriteLine("Better luck next time...");
